@@ -1,0 +1,511 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Comfortaa',cursive;
+
+}
+
+@media (min-width: 1367px) {
+    .content-wrapper,
+    .foot-wrapper{
+        width: 80em;
+        margin: 0 auto;
+        position: relative;
+    }
+    .main{
+        min-height: calc(85% - 3em);
+    }
+    .city-svg{
+        transform:translate(-50%);
+    }
+    .sport-name{
+        font-size:4em;
+    }
+    .text-svg{
+        top: -15%;
+    }
+    .contact-form{
+        transform-origin: right top;
+    }
+    .foot-menu{
+        float: left;
+        width: 60%;
+    }
+    .foot-sports,
+    .foot-contacts {
+        width: 18%;
+    }
+}
+@media (min-width: 1040px) and (max-width: 1366px) {
+    .content-wrapper,
+    .foot-wrapper{
+        width: 65em;
+        margin: 0 auto;
+        position: relative;
+    }
+    .main{
+        min-height: calc(80% - 3.1em);
+    }
+    .city-svg{
+        transform:translate(-50%) scale(0.8);
+    }
+    .sport-name{
+        font-size:2.5em;
+    }
+    .text-svg{
+        top: -15%;
+    }
+    .contact-form{
+        bottom: 0;
+        transform-origin: right bottom;
+    }
+    .contact-form-button{
+        bottom: 0;
+    }
+    .foot-menu{
+        float: left;
+        width: 60%;
+    }
+    .foot-sports,
+    .foot-contacts {
+        width: 18%;
+    }
+}
+@media (min-width: 760px) and (max-width: 1039px){
+    .content-wrapper,
+    .foot-wrapper{
+        width: 45em;
+        margin: 0 auto;
+        position: relative;
+    }
+    .main{
+        min-height: calc(80vh - 3em);
+    }
+    .city-svg{
+        transform:translate(-50%) scale(0.8);
+    }
+    .sport-name{
+        font-size:2.5em;
+    }
+    .text-svg{
+        top: -15%;
+    }
+    .contact-form{
+        bottom: 0;
+        transform-origin: right bottom;
+    }
+    .contact-form-button{
+        bottom: 0;
+    }
+    .foot-menu{
+        float: left;
+        width: 48%;
+    }
+    .foot-sports,
+    .foot-contacts {
+        width: 25%;
+    }
+}
+@media (min-width: 320px) and (max-width: 760px){
+    .content-wrapper,
+    .foot-wrapper{
+        width: 35em;
+        margin: 0 auto;
+        position: relative;
+    }
+    .main{
+        min-height: 80vh;
+    }
+    .city-svg{
+        transform:translate(-50%) scale(0.8);
+    }
+    .sport-name{
+        font-size:2.5em;
+    }
+    .text-svg{
+        top: -15%;
+    }
+    .contact-form{
+        bottom: 0;
+        transform-origin: right bottom;
+    }
+    .contact-form-button{
+        bottom: 0;
+    }
+    .foot-menu{
+        float: left;
+        width: 25%;
+    }
+    .foot-sports,
+    .foot-contacts {
+        width: 32%;
+    }
+    .soc-wrapper{
+        display: none;
+    }
+}
+
+.limiter{
+    width: 100%;
+    clear: both;
+}
+.header{
+    width: 100%;
+    background-color: black;
+}
+.headerContent{
+    min-height: 3em;
+    text-align: center;
+    position: relative;
+}
+.soc-wrapper{
+    position: absolute;
+    right: 10%;
+    top: 0.1em;
+    width: 172px;
+    height: 42px;
+    z-index: 50;
+}
+.soc-sprite{
+    width: 43px;
+    height: 42px;
+    float: left;
+    transition: 0.2s;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.soc-sprite:hover{
+    background-color: white;
+    transform: scale(1.1);
+}
+.vk-sprite{
+    background: url('../img/sprite-s.png');
+    background-position: -43px 0;
+}
+.fb-sprite{
+    background: url('../img/sprite-s.png');
+}
+.sc-sprite{
+    background: url('../img/sprite-s.png');
+    background-position: -86px 0;
+}
+.tw-sprite{
+    background: url('../img/sprite-s.png');
+    background-position: -127px 0;
+}
+.soc-sprite a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nameSite{
+    font-size: 2em;
+    color: white;
+}
+.back-btn{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    line-height: 2em;
+    text-transform: uppercase;
+    border: solid white 1px;
+    left: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 0.5em 0 0.75em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+.main{
+    position: relative;
+    width: 100%;
+    min-height: calc(85% - 3em);
+    margin:0 auto;
+    padding: 1em;
+    text-align: center;
+    overflow: hidden;
+}
+/************Float Menu Block********************/
+.float-menu ul{
+    padding: 1em 0 0;
+    margin: 0;
+    text-align: right;
+    position: absolute;
+    right: 3em;
+
+}
+.float-menu{
+    width: 4em;
+    min-height: 4em;
+    border-radius: 4em;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin:0; 
+    text-align: center;
+    transition: 0.3s;
+    font-family: 'Comfortaa', cursive;
+    z-index: 100;
+    cursor: pointer;
+}
+.menu-sign{
+    display: inline-block;
+    width: 1.2em;
+    border:  0.1em solid white; 
+    border-radius: 1.5em;
+    margin-top: 1.9em;
+    position: relative;
+}
+.menu-sign::before{
+    content: '';
+    width: 1.2em;
+    border:  0.1em solid white; 
+    border-radius: 1.5em;
+    position: absolute;
+    top: -0.59em;
+    left: -0.1em;
+}
+.menu-sign::after{
+    content: '';
+    width: 1.2em;
+    border:  0.1em solid white; 
+    border-radius: 1.5em;
+    position: absolute;
+    top: 0.4em;
+    left: -0.1em;
+}
+.menu-element{
+    list-style-type: none;
+    line-height: 3em;
+    margin: 0;
+    padding: 0;
+    display: none;
+    right: 0;
+    position: relative;
+}
+.element-name{
+    position: relative;
+    animation: menuAnim 0.3s;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;    
+}
+.menu-link{
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+    opacity: 0.6;
+}
+.menu-link:hover{
+    opacity: 1;
+}
+.element-pic::after{
+    content: '';
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    position: relative;
+    right: -1.2em;
+    animation: opacityAnim 0.5s;
+}
+.el1 .element-pic::after{
+    content: '\f015';
+}
+.el2 .element-pic::after{
+    content: '\f2d6';
+}
+.el3 .element-pic::after{
+    content: '\f03e';
+}
+.el4 .element-pic::after{
+    content: '\f2bc';
+}
+.el5 .element-pic::after{
+    content: '\f003';
+}
+@keyframes menuAnim{
+    from{
+        opacity: 0;
+        right: 2em;
+    }
+    to{
+        opacity: 1;
+        right: 0;
+    }
+}
+@keyframes opacityAnim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/*************Footer Block**************************/
+.footer{
+    width: 100%;
+    min-height: 15%;
+    background-color: black;
+    color: white;
+}
+.footer ul{
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+}
+.footer li{
+    margin-left: 1em;
+    line-height: 1.1em;
+    color: grey;
+    transition: 0.2s;
+    font-size: 0.8em;
+}
+.footer span+li{
+    margin-top: 0.5em;
+}
+.footer a{
+    text-decoration: none;
+    color: inherit;
+    padding-left: 0.2em;
+}
+.footer li:hover{
+    color: white;
+}
+.phone-contact::before{
+    content: '\f095';
+    color: white;
+    font-family: 'FontAwesome';
+}
+.vk-contact::before{
+    content: '\f189';
+    color: white;
+    font-family: 'FontAwesome';
+}
+.fb-contact::before{
+    content: '\f230';
+    color: white;
+    font-family: 'FontAwesome';
+}
+.scp-contact::before{
+    content: '\f17e';
+    color: white;
+    font-family: 'FontAwesome';
+}
+.inst-contact::before{
+    content: '\f16d';
+    color: white;
+    font-family: 'FontAwesome';
+}
+/*****************************************************/
+/******************About Us*************************/
+.about-text{
+    text-align: justify;
+    margin: 15em auto 0;
+}
+.about-text p{
+    margin: 0;
+    padding: 0;
+}
+/****************Contact form***********************/
+
+.contact-form-wrapper{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.contact-form-button{
+    color: white;
+    background-color: black;
+    line-height: 2em;
+    cursor: pointer;
+    height: 2em;
+    width: 7em;
+    text-align: center;
+    border-radius: 1em;
+    position: absolute;
+    right: 0;
+}
+.contact-form{
+    width: 15em;
+    height: 10em;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    border: solid black 2px;
+    border-radius: 1em;
+    display: none;
+    animation: formAni 0.2s linear;
+    z-index: 50;
+}
+.contact-form input{
+    margin: 0.3em;
+    border-radius: 0.3em;
+}
+@keyframes formAni {
+    from{
+        transform: scale(0)
+    }
+    to{
+        transform: scale(1)
+    }
+}
+@keyframes cbAni{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+.close-btn{
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 2em;
+    background-color: black;
+    transform: translateX(50%) translateY(-50%);
+    cursor: pointer;
+}
+.close-btn::before{
+    content: '\f00d';
+    color: white;
+    font-family: 'FontAwesome';
+
+}
+/*********************************************/
+.city-svg{
+    fill: none;
+    stroke-width: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /*transform: translate(-50%);*/
+    stroke: black;
+    stroke-opacity: 0.4;
+    z-index: -1;
+}
+/********************************************/
+.about-text a{
+    text-decoration: none;
+    color: inherit;
+}
+.about-text a::after{
+    content:'\f08e';
+    font-family: 'FontAwesome';
+    font-size: 0.8em;
+    padding-left: 0.2em;
+    transition: 0.1s;
+}

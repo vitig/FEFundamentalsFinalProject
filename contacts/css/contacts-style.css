@@ -1,0 +1,49 @@
+.content-wrapper{
+    padding-top: 3em;
+}
+.map-wrapper{
+    width: 50%;
+    float: left;
+}
+.text-wrapper{
+    width: 50%;
+    float: right;
+}
+.map-frame{
+    width: 100%;
+    min-height: 25em; ;
+}
+.set-point{
+    cursor: pointer;
+}
+.text-wrapper{
+    text-align: left;
+    padding-left: 2em;
+}
+.conts{
+    list-style: none;
+}
+.conts a{
+    text-decoration: none;
+    color: black;
+}
+.conts .vk-contact::before{
+    content: '\f189';
+    color: black;
+    font-family: 'FontAwesome';
+}
+.conts .fb-contact::before{
+    content: '\f230';
+    color: black;
+    font-family: 'FontAwesome';
+}
+.conts .scp-contact::before{
+    content: '\f17e';
+    color: black;
+    font-family: 'FontAwesome';
+}
+.conts .inst-contact::before{
+    content: '\f16d';
+    color: black;
+    font-family: 'FontAwesome';
+}

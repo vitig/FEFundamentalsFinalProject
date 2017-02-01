@@ -1,0 +1,23 @@
+#path-text{
+	stroke: black;
+	stroke-dasharray: 2200; 
+	stroke-dashoffset: 0;
+	animation: textAnimation 2s linear;
+	box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+}
+.text-svg{
+	position: absolute;
+	/*top: -15%;*/
+    left: 50%;
+	transform: translate(-50%) scale(2);
+}
+@keyframes textAnimation{
+	0%{
+		stroke-dashoffset: 2200;
+		fill:transparent;
+	}
+	100%{
+		stroke-dashoffset: 0;
+		fill: transparent;
+	}
+}

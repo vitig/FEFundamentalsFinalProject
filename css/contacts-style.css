@@ -1,0 +1,18 @@
+.content-wrapper{
+    padding-top: 3em;
+}
+.map-wrapper{
+    width: 50%;
+    float: left;
+}
+.text-wrapper{
+    width: 50%;
+    float: right;
+}
+.map-frame{
+    width: 100%;
+    min-height: 25em; ;
+}
+.set-point{
+    cursor: pointer;
+}

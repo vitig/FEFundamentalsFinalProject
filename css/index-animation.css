@@ -1,0 +1,135 @@
+.nameSite {
+    font-family: 'Merienda One', cursive;
+}
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: solid black 2px; 
+    height: 15em;
+    width: 15em;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    animation: circleAnimation 1.25s;
+    animation-timing-function: linear;
+    opacity: 0.5;
+    z-index: -3;
+}
+.line{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border: solid red 1px; 
+    min-height: 80%;
+    transform: rotate(-60deg);   
+    animation: lineAnimation 1.25s;
+    animation-timing-function: linear;
+    z-index: -2;
+}
+.welcome-text{
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2em;
+    min-width: 22em;
+    z-index: -1;
+}
+.nameSite{
+	position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(0%) scale(1);
+        opacity: 1;
+        color: white;
+	animation: nameSiteAnimate 0.5s;
+}
+
+
+@keyframes nameSiteAnimate{
+    0%{
+        position: absolute;
+        left: 50%;
+        top: 50vh;
+        transform: translateX(-50%) translateY(-50%) scale(5);
+        opacity: 0;
+        color: black;
+    }
+    50%{
+        position: absolute;
+        left: 50%;
+        top: 50vh;
+        transform: translateX(-50%) translateY(-50%) scale(5);
+        opacity: 1;
+        color: black;
+    }
+    95%{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%) translateY(0%) scale(1);
+        opacity: 1;
+        color: grey;
+    }
+    100%{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(0%) scale(1);
+        opacity: 1;
+        color: white;
+    }
+}
+@keyframes lineAnimation{
+    0%{
+        opacity: 0;
+        transform: rotate(0) scaleY(0);
+    }
+    39%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+        transform: rotate(0) scaleY(0);
+    }
+    70%{
+        opacity: 1;
+        transform: rotate(0) scaleY(1);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-60deg) scaleY(1);
+    }
+}
+@keyframes circleAnimation{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) scale(0);
+    }
+    39%{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) scale(0);
+    }
+    40%{
+        opacity: 0.5;
+        transform: translateX(-50%) translateY(-50%) scale(0);
+    }
+    73%{
+        opacity: 0.5;
+        transform: translateX(-50%) translateY(-50%) scale(1.2);
+    }
+    100%{
+        opacity: 0.5;
+        transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+}
